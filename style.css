@@ -1,0 +1,565 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  
+}
+ 
+body {
+  
+  font-family: "Playfair Display SC", serif;
+  
+  
+}
+
+/* HEADER - SECTION - HEADER - SECTION  */
+
+#header {
+  background: linear-gradient(
+    to right,
+    rgba(244, 241, 240, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  display: flex;
+  /*   flex-wrap: wrap; */
+  color: black;
+  padding: 10px;
+  position: sticky;
+
+  top: 0;
+  z-index: 100000;
+  
+}
+
+#header-img {
+  padding: 10px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #ecebe4;
+  border: 5px outset #fcfcfc;
+  margin-right: 10px;
+  margin-left: 20px;
+  transform: rotate(30deg);
+  animation-name: logoAnimation;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  /*   animation-play-state: paused;  */
+  animation-timing-function: cubic-bezier(0, 0.06, 1, 0.76);
+  align-self: center;
+  
+}
+
+@keyframes logoAnimation {
+  0% {
+    background: #000;
+    transform: rotate(30deg) scale(0.2);
+  }
+
+  100% {
+    transform: rotate(390deg);
+  }
+}
+
+/* PRODUCT INFO - PRODUCT INFO  */
+ 
+
+.product-info-wrapper {
+   
+  width: 100%;
+  height: 700px;
+   
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  
+  position: absolute;
+  z-index: 19000;
+ 
+   
+  
+}
+
+.background-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+  margin: 10px;
+  padding: 100px;
+  width: 80%;
+  margin: auto;
+  background: rgba(39, 31, 48, .8);
+  
+  border-radius: 10px;
+}
+
+#product-info {
+  width: auto;
+  background-image: url(https://i.postimg.cc/50G4sHcs/water-2208931.jpg);
+    
+  height: 700px;
+  filter: blur(1px) grayscale(30%);  
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+ 
+}
+.product-info-title,
+.product-description {
+  
+  font-family: "Open Sans", sans-serif;
+  
+}
+
+
+.product-info-title {
+  
+  font-family: "Cabin", sans-serif;
+  /*   text-decoration: underline #271F30; */
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 35px;
+  
+}
+
+.product-description {
+  width: 80%;
+  line-height: 1.6;
+ 
+ 
+}
+ 
+
+ 
+
+ 
+
+
+
+/* NAV - SECTION - NAV - SECTION - */
+
+#nav-bar {
+/*   min-width: 200px; */
+  width: 100%;
+  display: flex;
+ 
+}
+
+#nav-bar h1 {
+  font-weight: lighter;
+  font-size: 25px;
+  width: 600px;
+  align-self: center;
+  animation: titleAnim 1s ease-in-out;
+}
+
+@keyframes titleAnim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.nav-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 40px;
+  justify-content: flex-end;
+
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  /*   align-items: center; */
+}
+
+.nav-link {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  padding: 10px;
+  list-style: none;
+  margin-right: 20px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: black;
+  border-radius: 10px;
+   border: 1px dashed transparent;
+  transition-duration: 200ms;
+}
+
+.nav-link:hover {
+  border: 1px dashed #271F30;
+  background: #ECEBE4;
+  color: #271F30;
+   
+}
+
+.nav-link:visited {
+  color: darkblue;
+}
+
+
+.nav-link:active {
+  color: pink;
+ 
+}
+
+
+
+/* VIDEO - SECTION - VIDEO - SECTION   */
+
+.videoFormWrapper {
+  background: #ecebe4;
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  background: #d4d3cd;
+  padding: 30px;
+}
+
+input[type="email"] {
+  padding: 10px 100px 10px 5px;
+
+  border-radius: 20px;
+  border: 2px solid #513d69;
+}
+
+::placeholder {
+  text-align: left;
+}
+
+#submit {
+  border: none;
+
+  background: #513d69;
+  padding: 7px 15px;
+  color: white;
+  border-radius: 3px;
+  transition-duration: 200ms;
+ 
+}
+
+#submit:hover {
+  background: #ECEBE4;
+  color:  black;
+}
+
+.video-container {
+  width: 100%;
+  text-align: center;
+  padding: 60px;
+}
+#video {
+  width: 100%;
+  height: 65vmin;
+
+  max-width: 1000px;
+
+  border-radius: 3px;
+  box-shadow: -50px 5px 100px -40px rgba(122, 122, 122, 0.3);
+}
+
+/* CARD - SECTION - CARD - SECTION - CARD - SECTION */
+
+#pricing {
+  background: #c4c3bb;
+  color: black;
+  padding: 50px;
+  display: flex;
+
+  justify-content: space-around;
+/*   flex-wrap: wrap; */
+}
+
+.cards {
+  min-width: 200px;
+  margin: 5px;
+  background: #ecebe4;
+  padding: 20px;
+  border-radius: 4px;
+  text-align: center;
+  border: 1px solid #271f30;
+  box-shadow: -4px 0px 10px -3px #807f77;
+  
+ 
+}
+
+
+ 
+#pricing h3 {
+  font-family: "Cabin", sans-serif;
+  letter-spacing: 1.7px;
+  background: #ecebe4;
+  color: #343434;
+  padding: 20px 20px 5px;
+}
+
+#pricing .price {
+  font-family: "Cabin", sans-serif;
+  background: #271f30;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 10px;
+  margin: auto;
+ 
+}
+
+.select-btn {
+  border: none;
+  margin-top: 10px;
+  
+  background: #d4667d;
+  padding: 10px 30px;
+  color: white;
+  border-radius: 3px;
+  transition-duration: 200ms;
+  box-shadow: -1px 5px 10px 5px #ffd6de;
+}
+.select-btn:active {
+  background: #faecd7;
+
+  color: #b0784a;
+  box-shadow: -1px 5px 10px 5px #faecd7;
+}
+
+.select-btn:hover {
+  background: #343434;
+
+  color: white;
+  box-shadow: -1px 2px 15px -2px #343434;
+}
+
+
+/*   Footer - Foooter - Footer  */
+
+footer {
+  
+  background: black;
+  padding: 30px;
+  color: #fff;
+  text-align: center;
+  
+  
+}
+
+.footer-text {
+  font-family: "Playfair Display SC", serif;
+}
+
+.links {
+  margin-right: 10px;
+  font-family: "Cabin", sans-serif;
+}
+
+.fab  {
+   
+  font-size: 20px;
+ 
+}
+
+.fab:hover {
+  color: #FAFFA3;
+  
+}
+
+
+/* Media-Querys  */ /* Media-Querys  */ /* Media-Querys  */
+
+
+
+@media (max-width: 950px) {
+  
+  #header-img {
+  display: none;
+}
+  
+ 
+  
+  
+  
+  /* NAV - SECTION - NAV - SECTION - */
+
+  #nav-bar {
+ 
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+
+    flex-wrap: wrap;
+  }
+
+  #nav-bar h1 {
+    
+    font-size: 25px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .nav-container {
+    justify-content: space-around;
+    
+    height: 50px;
+  }
+  .nav-link {
+/*     color: white; */
+    margin-right: 0px;
+    
+  }
+  
+  
+.nav-link:active {
+  color: gold;
+ 
+}
+
+.nav-link:visited {
+  color: blue;
+}
+
+.nav-link:hover {
+  border: 1px dashed #000;
+  background: #ECEBE4;
+  color: black;
+   
+}
+
+  /* PRODUCT INFO - PRODUCT INFO  */
+  .background-wrapper {
+    padding: 20px;
+ 
+  }
+.product-info-title {
+  
+  font-family: "Kalam", cursive;
+  /*   text-decoration: underline #271F30; */
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 35px;
+  
+}
+
+.product-description {
+   
+  font-size: 18px;
+  line-height: 1.9;
+ 
+ 
+}
+  /*  Form-submit - Form-submit - Form-submit  */
+
+  .form-container {
+    text-align: center;
+  }
+
+  input[type="email"] {
+    display: flex;
+    margin-bottom: 10px;
+  }
+/*  Video - Video - Video - Video  */
+  
+.video-container {
+  width: 100%;
+  text-align: center;
+ 
+  padding: 10px;
+
+}
+#video {
+  width: 100%;
+ 
+}  
+  
+/*  Product-Info  Product-Info  Product-Info */
+  
+ 
+ 
+ 
+  
+  
+/* Cards - Cards */
+  
+  #pricing {
+  
+  color: black;
+  padding: 5px;
+  display: flex;
+  
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.cards {
+  max-width: 1000px;
+  margin: 5px;
+  background: #ecebe4;
+  padding: 20px;
+  border-radius: 4px;
+  text-align: center;
+  border: 1px solid #271f30;
+  box-shadow: -4px 0px 10px -3px #807f77;
+  
+ 
+}
+
+  
+}
+
+@media (max-width: 514px) {
+  
+    /* PRODUCT INFO - PRODUCT INFO  */
+
+.product-info-title {
+  
+  font-family: "Kalam", cursive;
+ 
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 25px;
+  
+}
+
+.product-description {
+   
+  font-size: 15px;
+  line-height: 1.4;
+ 
+ 
+}
+  
+  
+} 
+
+@media (max-width: 329px) {
+     /* PRODUCT INFO - PRODUCT INFO  */
+
+.product-info-title {
+  
+  font-family: "Kalam", cursive;
+ 
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 19px;
+  
+}
+
+.product-description {
+   
+  font-size: 14px;
+  line-height: 1.4;
+ 
+ 
+}
+}
+
